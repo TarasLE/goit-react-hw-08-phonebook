@@ -1,0 +1,48 @@
+.Container {
+    display: flex;
+    padding: 0px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.InputContainer {
+    display: flex;
+    padding: 0px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.FilterInput {
+    width: inherit;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.FilterHeader {
+    font-size: 20px;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.FilterFadeEnter {
+    opacity: 0;
+    transform: scale(0.1);
+}
+.FilterFadeEnterActive {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 250ms linear;
+}
+.FilterFadeExit {
+    opacity: 1;
+    transform: scale(1);
+}
+.FilterFadeExitActive {
+    opacity: 0;
+    transform: scale(0.1);
+    transition: all 250ms linear;
+}

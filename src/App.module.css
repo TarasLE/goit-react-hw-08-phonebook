@@ -1,0 +1,54 @@
+.Container {
+    padding: 10px;
+    background-color: rgba(84, 228, 103, 0.5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 3px 1px black, 1px 1px 3px 1px black,
+        1px 1px 3px 1px black;
+}
+
+.HeaderFadeAppear {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.HeaderFadeAppearActive {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms linear;
+}
+
+.ContactListFadeEnter {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.ContactListFadeEnterActive {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 250ms linear;
+}
+
+.ContactListFadeExit {
+    opacity: 1;
+    transform: translateX(0%);
+}
+.ContactListFadeExitActive {
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 250ms linear;
+}
+
+.ContactListFadeAppear {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.ContactListFadeAppearActive {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 250ms linear;
+}

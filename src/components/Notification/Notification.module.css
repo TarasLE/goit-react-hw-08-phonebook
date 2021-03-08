@@ -1,0 +1,27 @@
+.Notification {
+    padding: 30px;
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 205px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: rgba(240, 38, 24, 0.9);
+    width: 350px;
+    height: 150px;
+    z-index: 1;
+}
+
+.FormBtn {
+    margin-top: 10px;
+    height: 50px;
+    background-color: rgba(232, 204, 45, 0.8);
+}
+
+.FormBtn:hover {
+    color: #ffffff;
+    background-color: rgb(15, 163, 20);
+}

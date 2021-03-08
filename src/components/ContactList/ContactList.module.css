@@ -1,0 +1,79 @@
+.Container {
+    display: flex;
+    padding: 0px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.Contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: black solid 1px;
+    background-color: rgb(250, 246, 225);
+    transition-duration: 250ms;
+    /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; */
+    margin-bottom: 5px;
+}
+
+.Contact:hover {
+    /* transform: scale(1.03); */
+    background-color: rgb(19, 179, 214);
+    color: white;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    width: inherit;
+    text-decoration: dashed;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+.DeleteBtn {
+    background-color: rgba(232, 204, 45, 0.8);
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition-duration: 250ms;
+}
+
+.DeleteBtn:hover {
+    color: #ffffff;
+    background-color: red;
+}
+
+.ContactInfo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.ContactListItemFadeEnter {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.ContactListItemFadeEnterActive {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 250ms linear;
+}
+
+.ContactListItemFadeExit {
+    opacity: 1;
+    transform: translateX(0);
+    /* transform: all 250ms linear; */
+}
+
+.ContactListItemFadeExitActive {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 250ms linear;
+}
