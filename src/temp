@@ -2,6 +2,6 @@ deploy to githug^
 "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
 
-        "homepage": "https://TarasLE.github.io/goit-react-hw-08-phonebook",
+        "homepage": "https://TarasLE.github.io/goit-react-hw-05-phonebook",
 
         "deploy": "netlify deploy -p"
