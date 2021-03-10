@@ -1,7 +1,8 @@
 import React from 'react'
+import styles from './Homepage.module.css'
 
 const Homepage = () => (
-    <div>
+    <div className={styles.Container}>
         <h1>
             Homepage
             <span> </span>

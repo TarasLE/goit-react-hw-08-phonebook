@@ -1,0 +1,6 @@
+.Container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: solid 2px red;
+}

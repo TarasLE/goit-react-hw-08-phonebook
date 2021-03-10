@@ -6,7 +6,7 @@ import AuthNav from '../AuthNav/AuthNav'
 import styles from './AppBar.module.css'
 
 const AppBar = ({ isAuthenticated }) => (
-    <header>
+    <header className={styles.Container}>
         <Navigation />
         {isAuthenticated ? <UserMenu /> : <AuthNav />}
     </header>
