@@ -10,7 +10,6 @@ Notification.propTypes = {
 function Notification({ sameContact, currentNumber }) {
     return (
         <div className={styles.Notification}>
-            {/* <h2>{sameContact} is already in contacts</h2> */}
             {sameContact && currentNumber ? (
                 <div>
                     <h2>{sameContact} is already in contacts</h2>

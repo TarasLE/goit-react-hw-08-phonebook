@@ -29,7 +29,7 @@ class Login extends Component {
                 <h1>Login</h1>
 
                 <form onSubmit={this.handleSubmit} autoComplete="off">
-                    <lable>
+                    <lable is="webview">
                         Email
                         <input
                             type="email"
@@ -38,7 +38,7 @@ class Login extends Component {
                             onChange={this.handleChange}
                         ></input>
                     </lable>
-                    <lable>
+                    <lable is="webview">
                         Password
                         <input
                             type="password"
@@ -53,6 +53,8 @@ class Login extends Component {
         )
     }
 }
+
+Login.propTypes = { onLogin: PropTypes.func.isRequired }
 
 const mapDispatchToProps = {
     onLogin: authOperations.login,

@@ -10,7 +10,6 @@ import {
     fetchContactRequest,
     fetchContactSuccess,
     fetchContactError,
-    // deleteContact,
     changeFilter,
 } from './phonebook-actions'
 

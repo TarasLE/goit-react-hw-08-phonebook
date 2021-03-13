@@ -14,6 +14,8 @@ const AppBar = ({ isAuthenticated }) => (
     </header>
 )
 
+AppBar.propTypes = { isAuthenticated: PropTypes.bool.isRequired }
+
 const mapStateToProps = (state) => ({
     isAuthenticated: authSelectors.getIsAuthenticated(state),
 })

@@ -30,7 +30,7 @@ class Register extends Component {
                 <h1>Registration</h1>
 
                 <form onSubmit={this.handleSubmit} autoComplete="off">
-                    <lable>
+                    <lable is="webview">
                         Name
                         <input
                             type="name"
@@ -39,7 +39,7 @@ class Register extends Component {
                             onChange={this.handleChange}
                         ></input>
                     </lable>
-                    <lable>
+                    <lable is="webview">
                         Email
                         <input
                             type="email"
@@ -48,7 +48,7 @@ class Register extends Component {
                             onChange={this.handleChange}
                         ></input>
                     </lable>
-                    <lable>
+                    <lable is="webview">
                         Password
                         <input
                             type="password"
@@ -62,6 +62,10 @@ class Register extends Component {
             </div>
         )
     }
+}
+
+Register.propTypes = {
+    onRegister: PropTypes.func.isRequired,
 }
 
 const mapDispatchToProps = {

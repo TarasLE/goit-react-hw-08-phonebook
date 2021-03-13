@@ -24,6 +24,10 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = { onLogout: authOperations.logout }
 
-UserMenu.propTypes = {}
+UserMenu.propTypes = {
+    onLogout: PropTypes.func.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserMenu)

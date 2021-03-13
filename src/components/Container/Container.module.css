@@ -1,8 +1,3 @@
 .Container {
-    /* display: flex; */
     border: solid 2px red;
-    /* align-items: center;
-    justify-content: center;
-    align-content: center;
-    justify-items: center; */
 }

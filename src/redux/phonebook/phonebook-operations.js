@@ -11,8 +11,6 @@ import {
     fetchContactError,
 } from './phonebook-actions'
 
-// axios.defaults.baseURL = 'http://localhost:4040'
-
 const fetchContacts = () => async (dispatch) => {
     dispatch(fetchContactRequest())
     try {
