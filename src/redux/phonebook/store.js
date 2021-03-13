@@ -12,6 +12,7 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import logger from 'redux-logger'
+import authReducer from '../auth/auth-reducers'
 
 const persistConfig = {
     key: 'myRoot',
@@ -33,6 +34,7 @@ const middleware = [
 ]
 const store = configureStore({
     reducer: {
+        auth: authReducer,
         contacts: persistReducer(phonebookPersistConfig, phoneBookReducer),
     },
     middleware,

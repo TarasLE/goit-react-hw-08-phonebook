@@ -11,7 +11,7 @@ const Navigation = () => (
             className={styles.Link}
             activeClassName={styles.LinkActive}
         >
-            Main
+            Home
         </NavLink>
 
         <NavLink

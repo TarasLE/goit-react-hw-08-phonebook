@@ -1,4 +1,6 @@
 import { React, Component } from 'react'
+import { connect } from 'react-redux'
+import authOperations from '../../redux/auth/auth-operations'
 import PropTypes from 'prop-types'
 
 class Register extends Component {
@@ -17,6 +19,7 @@ class Register extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        this.props.onRegister(this.state)
         this.setState({ name: '', email: '', password: '' })
     }
 
@@ -24,7 +27,7 @@ class Register extends Component {
         const { name, email, password } = this.state
         return (
             <div>
-                <h1>Registration Page</h1>
+                <h1>Registration</h1>
 
                 <form onSubmit={this.handleSubmit} autoComplete="off">
                     <lable>
@@ -54,10 +57,15 @@ class Register extends Component {
                             onChange={this.handleChange}
                         ></input>
                     </lable>
+                    <button type="submit">Register</button>
                 </form>
             </div>
         )
     }
 }
 
-export default Register
+const mapDispatchToProps = {
+    onRegister: authOperations.register,
+}
+
+export default connect(null, mapDispatchToProps)(Register)

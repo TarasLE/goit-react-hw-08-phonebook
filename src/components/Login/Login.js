@@ -1,4 +1,6 @@
 import { React, Component } from 'react'
+import { connect } from 'react-redux'
+import authOperations from '../../redux/auth/auth-operations'
 import PropTypes from 'prop-types'
 
 class Login extends Component {
@@ -16,6 +18,7 @@ class Login extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        this.props.onLogin(this.state)
         this.setState({ name: '', email: '', password: '' })
     }
 
@@ -23,7 +26,7 @@ class Login extends Component {
         const { email, password } = this.state
         return (
             <div>
-                <h1>Login Page</h1>
+                <h1>Login</h1>
 
                 <form onSubmit={this.handleSubmit} autoComplete="off">
                     <lable>
@@ -44,10 +47,15 @@ class Login extends Component {
                             onChange={this.handleChange}
                         ></input>
                     </lable>
+                    <button type="submit">Login</button>
                 </form>
             </div>
         )
     }
 }
 
-export default Login
+const mapDispatchToProps = {
+    onLogin: authOperations.login,
+}
+
+export default connect(null, mapDispatchToProps)(Login)
