@@ -17,18 +17,31 @@ import styles from './App.module.css'
 // import PropTypes from 'prop-types'
 import './App.css'
 import { Route, Switch } from 'react-router-dom'
+import { connect } from 'react-redux'
+import authOperations from './redux/auth/auth-operations'
 
-const App = () => (
-    <Container>
-        <AppBar />
+class App extends Component {
+    componentDidMount() {
+        this.props.onRefreshUser()
+    }
+    render() {
+        return (
+            <Container>
+                <AppBar />
 
-        <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/contacts" component={Phonebook} />
-        </Switch>
-    </Container>
-)
+                <Switch>
+                    <Route exact path="/" component={HomePage} />
+                    <Route exact path="/register" component={Register} />
+                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/contacts" component={Phonebook} />
+                </Switch>
+            </Container>
+        )
+    }
+}
 
-export default App
+const mapDispatchToProps = {
+    onRefreshUser: authOperations.getCurrentUser,
+}
+
+export default connect(null, mapDispatchToProps)(App)

@@ -32,13 +32,18 @@ const middleware = [
     }),
     logger,
 ]
+
+const authPersistConfig = { key: 'auth', storage, whitelist: ['token'] }
+
 const store = configureStore({
     reducer: {
-        auth: authReducer,
-        contacts: persistReducer(phonebookPersistConfig, phoneBookReducer),
+        auth: persistReducer(authPersistConfig, authReducer),
+        contacts: phoneBookReducer,
     },
     middleware,
     devTools: process.env.NODE_ENV === 'development',
 })
 
-export default store
+const persistor = persistStore(store)
+
+export default { store, persistor }
