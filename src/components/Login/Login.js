@@ -2,6 +2,7 @@ import { React, Component } from 'react'
 import { connect } from 'react-redux'
 import authOperations from '../../redux/auth/auth-operations'
 import PropTypes from 'prop-types'
+import styles from './Login.module.css'
 
 class Login extends Component {
     state = {
@@ -25,29 +26,37 @@ class Login extends Component {
     render() {
         const { email, password } = this.state
         return (
-            <div>
+            <div className={styles.Container}>
                 <h1>Login</h1>
 
-                <form onSubmit={this.handleSubmit} autoComplete="off">
+                <form
+                    onSubmit={this.handleSubmit}
+                    autoComplete="off"
+                    className={styles.FormContainer}
+                >
                     <lable is="webview">
-                        Email
+                        EMAIL
                         <input
                             type="email"
                             name="email"
                             value={email}
                             onChange={this.handleChange}
+                            className={styles.FormItem}
                         ></input>
                     </lable>
                     <lable is="webview">
-                        Password
+                        PASSWORD
                         <input
                             type="password"
                             name="password"
                             value={password}
                             onChange={this.handleChange}
+                            className={styles.FormItem}
                         ></input>
                     </lable>
-                    <button type="submit">Login</button>
+                    <button type="submit" className={styles.FormBtn}>
+                        <h3>LOGIN</h3>
+                    </button>
                 </form>
             </div>
         )

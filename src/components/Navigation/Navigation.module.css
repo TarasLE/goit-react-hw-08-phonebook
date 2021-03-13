@@ -5,3 +5,11 @@
 .LinkActive {
     color: red;
 }
+
+.Container {
+    display: flex;
+}
+
+.Home {
+    margin-right: 20px;
+}

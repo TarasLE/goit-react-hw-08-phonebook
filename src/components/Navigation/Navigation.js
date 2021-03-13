@@ -6,14 +6,14 @@ import { connect } from 'react-redux'
 import authSelectors from '../../redux/auth/auth-selectors'
 
 const Navigation = ({ isAuthenticated }) => (
-    <nav>
+    <nav className={styles.Container}>
         <NavLink
             to="/"
             exact
             className={styles.Link}
             activeClassName={styles.LinkActive}
         >
-            Home
+            <h1 className={styles.Home}>Home</h1>
         </NavLink>
 
         {isAuthenticated && (
@@ -23,7 +23,7 @@ const Navigation = ({ isAuthenticated }) => (
                 className={styles.Link}
                 activeClassName={styles.LinkActive}
             >
-                Contacts
+                <h1>Contacts</h1>
             </NavLink>
         )}
     </nav>

@@ -1,6 +1,21 @@
 .Container {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    background-color: khaki;
+
+    /* padding-left: 20px; */
+    /* padding-right: 100px; */
+    /* padding-left: 30px; */
+    /* margin-left: 30px; */
+    /* margin-right: 30px; */
     border: solid 2px red;
+}
+
+.Header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
 }

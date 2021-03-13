@@ -4,14 +4,14 @@ import { NavLink } from 'react-router-dom'
 import styles from './AuthNav.module.css'
 
 const AuthNav = () => (
-    <div>
+    <div className={styles.Container}>
         <NavLink
             to="/register"
             exact
             className={styles.Link}
             activeClassName={styles.LinkActive}
         >
-            Registration
+            <h2 className={styles.Registration}>Registration</h2>
         </NavLink>
         <NavLink
             to="/login"
@@ -19,7 +19,7 @@ const AuthNav = () => (
             className={styles.Link}
             activeClassName={styles.LinkActive}
         >
-            Login
+            <h2>Login</h2>
         </NavLink>
     </div>
 )

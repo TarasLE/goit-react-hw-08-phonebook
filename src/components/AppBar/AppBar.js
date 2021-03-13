@@ -8,10 +8,12 @@ import { connect } from 'react-redux'
 import authSelectors from '../../redux/auth/auth-selectors'
 
 const AppBar = ({ isAuthenticated }) => (
-    <header className={styles.Container}>
-        <Navigation />
-        {isAuthenticated ? <UserMenu /> : <AuthNav />}
-    </header>
+    <div className={styles.Container}>
+        <header className={styles.Header}>
+            <Navigation />
+            {isAuthenticated ? <UserMenu /> : <AuthNav />}
+        </header>
+    </div>
 )
 
 AppBar.propTypes = { isAuthenticated: PropTypes.bool.isRequired }
