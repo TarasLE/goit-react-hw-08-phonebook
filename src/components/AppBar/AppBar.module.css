@@ -2,13 +2,18 @@
     display: flex;
     width: 100%;
     background-color: khaki;
-
+    background-image: linear-gradient(
+            to right,
+            rgba(129, 240, 151, 0.9),
+            rgba(110, 161, 196, 0.9)
+        ),
+        url(../../img/background.jpg);
     /* padding-left: 20px; */
     /* padding-right: 100px; */
     /* padding-left: 30px; */
     /* margin-left: 30px; */
     /* margin-right: 30px; */
-    border: solid 2px red;
+    border-bottom: solid 2px rgba(29, 28, 28, 0.1);
 }
 
 .Header {

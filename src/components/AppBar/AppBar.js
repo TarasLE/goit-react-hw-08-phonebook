@@ -6,6 +6,7 @@ import AuthNav from '../AuthNav/AuthNav'
 import styles from './AppBar.module.css'
 import { connect } from 'react-redux'
 import authSelectors from '../../redux/auth/auth-selectors'
+import BckgroundImage from '../../img/background.jpg'
 
 const AppBar = ({ isAuthenticated }) => (
     <div className={styles.Container}>

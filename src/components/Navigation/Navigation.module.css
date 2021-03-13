@@ -1,15 +1,18 @@
 .Link {
     text-decoration: none;
+    color: black;
+    /* background-color: blanchedalmond; */
 }
 
 .LinkActive {
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
 .Container {
     display: flex;
 }
 
-.Home {
+.HeaderTitle {
     margin-right: 20px;
+    /* color: rgb(0, 0, 0); */
 }

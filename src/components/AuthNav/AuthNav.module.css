@@ -1,9 +1,10 @@
 .Link {
     text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 .LinkActive {
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
 .Container {

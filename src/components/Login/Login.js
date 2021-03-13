@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import authOperations from '../../redux/auth/auth-operations'
 import PropTypes from 'prop-types'
 import styles from './Login.module.css'
+import { CSSTransition } from 'react-transition-group'
 
 class Login extends Component {
     state = {
@@ -26,39 +27,49 @@ class Login extends Component {
     render() {
         const { email, password } = this.state
         return (
-            <div className={styles.Container}>
-                <h1>Login</h1>
+            <CSSTransition
+                in={true}
+                appear={true}
+                timeout={500}
+                classNames={{
+                    appear: styles.HeaderFadeAppear,
+                    appearActive: styles.HeaderFadeAppearActive,
+                }}
+            >
+                <div className={styles.Container}>
+                    <h1>Login</h1>
 
-                <form
-                    onSubmit={this.handleSubmit}
-                    autoComplete="off"
-                    className={styles.FormContainer}
-                >
-                    <lable is="webview">
-                        EMAIL
-                        <input
-                            type="email"
-                            name="email"
-                            value={email}
-                            onChange={this.handleChange}
-                            className={styles.FormItem}
-                        ></input>
-                    </lable>
-                    <lable is="webview">
-                        PASSWORD
-                        <input
-                            type="password"
-                            name="password"
-                            value={password}
-                            onChange={this.handleChange}
-                            className={styles.FormItem}
-                        ></input>
-                    </lable>
-                    <button type="submit" className={styles.FormBtn}>
-                        <h3>LOGIN</h3>
-                    </button>
-                </form>
-            </div>
+                    <form
+                        onSubmit={this.handleSubmit}
+                        autoComplete="off"
+                        className={styles.FormContainer}
+                    >
+                        <lable is="webview">
+                            EMAIL
+                            <input
+                                type="email"
+                                name="email"
+                                value={email}
+                                onChange={this.handleChange}
+                                className={styles.FormItem}
+                            ></input>
+                        </lable>
+                        <lable is="webview">
+                            PASSWORD
+                            <input
+                                type="password"
+                                name="password"
+                                value={password}
+                                onChange={this.handleChange}
+                                className={styles.FormItem}
+                            ></input>
+                        </lable>
+                        <button type="submit" className={styles.FormBtn}>
+                            <h3>LOGIN</h3>
+                        </button>
+                    </form>
+                </div>
+            </CSSTransition>
         )
     }
 }

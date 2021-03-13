@@ -29,3 +29,14 @@
     color: #ffffff;
     background-color: rgb(15, 163, 20);
 }
+
+.HeaderFadeAppear {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.HeaderFadeAppearActive {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms linear;
+}

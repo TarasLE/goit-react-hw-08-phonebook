@@ -8,6 +8,8 @@ import { connect } from 'react-redux'
 import authOperations from './redux/auth/auth-operations'
 import PrivateRoute from './components/PrivateRoute/privateRoute'
 import PublicRoute from './components/PublicRoute/publicRoute'
+import { CSSTransition } from 'react-transition-group'
+
 const HomePage = lazy(() => import('./components/HomePage/Homepage'))
 const Login = lazy(() => import('./components/Login/Login'))
 const Register = lazy(() => import('./components/Register/Register'))
@@ -30,6 +32,7 @@ class App extends Component {
                             component={Register}
                             reDirectTo="/contacts"
                         />
+
                         <PublicRoute
                             path="/login"
                             restricted
