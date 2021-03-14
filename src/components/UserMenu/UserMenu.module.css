@@ -23,6 +23,9 @@
 }
 
 .Avatar {
-    fill: #9ec50f;
     border-radius: 50%;
+}
+
+.Avatar:hover {
+    fill: #2196f3;
 }

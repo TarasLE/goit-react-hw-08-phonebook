@@ -1,7 +1,11 @@
 .Link {
     text-decoration: none;
     color: black;
-    /* background-color: blanchedalmond; */
+}
+
+.Link:hover {
+    text-decoration: none;
+    color: rgb(255, 1, 1);
 }
 
 .LinkActive {

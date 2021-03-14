@@ -3,6 +3,10 @@
     color: rgb(0, 0, 0);
 }
 
+.Link:hover {
+    color: rgb(255, 0, 0);
+}
+
 .LinkActive {
     color: rgb(255, 0, 0);
 }
