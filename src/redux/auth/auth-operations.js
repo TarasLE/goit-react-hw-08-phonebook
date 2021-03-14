@@ -1,5 +1,7 @@
 import axios from 'axios'
 import authActions from './auth-actions'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com'
 
@@ -22,6 +24,15 @@ const register = (credentials) => async (dispatch) => {
         dispatch(authActions.registerSuccess(response.data))
     } catch (error) {
         dispatch(authActions.registerError(error.message))
+        toast.error('This user is already registered', {
+            position: 'top-center',
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        })
     }
 }
 
@@ -35,6 +46,18 @@ const login = (credentials) => async (dispatch) => {
         dispatch(authActions.loginSuccess(response.data))
     } catch (error) {
         dispatch(authActions.loginError(error.message))
+        toast.error(
+            'Login data is incorrect. Please check data and try again',
+            {
+                position: 'top-center',
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            }
+        )
     }
 }
 
