@@ -4,11 +4,11 @@
 }
 
 .Link:hover {
-    color: rgb(255, 0, 0);
+    color: white;
 }
 
 .LinkActive {
-    color: rgb(255, 0, 0);
+    color: white;
 }
 
 .Container {

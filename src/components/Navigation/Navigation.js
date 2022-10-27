@@ -13,7 +13,7 @@ const Navigation = ({ isAuthenticated }) => (
             className={styles.Link}
             activeClassName={styles.LinkActive}
         >
-            <h1 className={styles.HeaderTitle}>Home</h1>
+            <h3 className={styles.HeaderTitle}>Home</h3>
         </NavLink>
 
         {isAuthenticated && (
@@ -23,7 +23,7 @@ const Navigation = ({ isAuthenticated }) => (
                 className={styles.Link}
                 activeClassName={styles.LinkActive}
             >
-                <h1 className={styles.HeaderTitle}>Contacts</h1>
+                <h3 className={styles.HeaderTitle}>Contacts</h3>
             </NavLink>
         )}
     </nav>

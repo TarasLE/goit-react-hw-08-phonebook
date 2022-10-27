@@ -11,7 +11,7 @@ const AuthNav = () => (
             className={styles.Link}
             activeClassName={styles.LinkActive}
         >
-            <h2 className={styles.Registration}>Registration</h2>
+            <h3 className={styles.Registration}>Registration</h3>
         </NavLink>
         <NavLink
             to="/login"
@@ -19,7 +19,7 @@ const AuthNav = () => (
             className={styles.Link}
             activeClassName={styles.LinkActive}
         >
-            <h2>Login</h2>
+            <h3>Login</h3>
         </NavLink>
     </div>
 )

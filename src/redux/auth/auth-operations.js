@@ -3,7 +3,7 @@ import authActions from './auth-actions'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com'
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com'
 
 const token = {
     set(token) {

@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import authSelectors from '../../redux/auth/auth-selectors'
 import { connect } from 'react-redux'
 import defaultAvatar from '../../img/avatar.svg'
+import logoutIcon from '../../img/logout-icon.svg'
 import authOperations from '../../redux/auth/auth-operations'
 import styles from './UserMenu.module.css'
 
-const UserMenu = ({ avatar, name, onLogout }) => {
+const UserMenu = ({ avatar,logout, name, onLogout }) => {
     return (
         <div className={styles.Container}>
             <img
@@ -16,14 +17,22 @@ const UserMenu = ({ avatar, name, onLogout }) => {
                 height="42"
                 className={styles.Avatar}
             />
-            <h2 className={styles.UserName}>Welcome {name}</h2>
-            <button
-                type="button"
-                onClick={onLogout}
-                className={styles.LogOutBtn}
-            >
-                <h3>Logout</h3>
-            </button>
+            <div className={styles.ContainerUserCorner}>
+                <h2 className={styles.UserName}>Welcome {name}</h2>
+                <button
+                    type="button"
+                    onClick={onLogout}
+                    className={styles.LogOutBtn}
+                >
+                    <img
+                        src={logout}
+                        alt=""
+                        width="24"
+                        height="24"
+                        className={styles.Avatar}
+                    />
+                </button>
+            </div>
         </div>
     )
 }
@@ -31,6 +40,7 @@ const UserMenu = ({ avatar, name, onLogout }) => {
 const mapStateToProps = (state) => ({
     name: authSelectors.userName(state),
     avatar: defaultAvatar,
+    logout: logoutIcon,
 })
 
 const mapDispatchToProps = { onLogout: authOperations.logout }
